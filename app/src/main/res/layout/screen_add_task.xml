@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context="uz.marupoov.reminderapp.presentation.screen.add_task.AddTaskScreen">
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/app_bar_color"
+        android:elevation="5dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="New Task"
+        android:textColor="#FFF"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@id/bar"
+        app:layout_constraintLeft_toLeftOf="@id/bar"
+        app:layout_constraintRight_toRightOf="@id/bar"
+        app:layout_constraintTop_toTopOf="@id/bar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Task"
+            android:textSize="19dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btn_date"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_create_date"
+        android:drawableRight="@drawable/date_svgrepo_com"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="Date"
+        android:textColor="#3C3C3C"
+        android:textSize="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_task" />
+
+    <TextView
+        android:id="@+id/btn_time"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_create_date"
+        android:drawableRight="@drawable/time_svgrepo_com"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="Time"
+        android:textColor="#3C3C3C"
+        android:textSize="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_date" />
+
+    <TextView
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_create_btn"
+        android:gravity="center"
+        android:text="Create"
+        android:textColor="@color/btn_create_text_color"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_riplle_white_circle"
+        android:contentDescription="@string/app_name"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:src="@drawable/back_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="@id/bar"
+        app:layout_constraintLeft_toLeftOf="@id/bar"
+        app:layout_constraintTop_toTopOf="@id/bar"
+        app:tint="#FFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

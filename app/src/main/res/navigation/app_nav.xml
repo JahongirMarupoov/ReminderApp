@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.marupoov.reminderapp.presentation.screen.splash.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash" >
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.marupoov.reminderapp.presentation.screen.main.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main" >
+        <action
+            android:id="@+id/action_mainScreen_to_addTaskScreen"
+            app:destination="@id/addTaskScreen"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_up"
+            />
+
+        <action
+            android:id="@+id/action_mainScreen_to_allCompleteScreen"
+            app:destination="@id/allCompleteScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskScreen"
+        android:name="uz.marupoov.reminderapp.presentation.screen.add_task.AddTaskScreen"
+        android:label="screen_add_task"
+        tools:layout="@layout/screen_add_task" />
+    <fragment
+        android:id="@+id/allCompleteScreen"
+        android:name="uz.marupoov.reminderapp.presentation.screen.all_complete.AllCompleteScreen"
+        android:label="screen_all_complete"
+        tools:layout="@layout/screen_all_complete" />
+</navigation>
